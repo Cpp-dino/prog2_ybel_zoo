@@ -1,7 +1,6 @@
+import zoo.Aquarium;
 import zoo.Habitat;
-import zoo.Zoo;
-import zoo.mammals.cats.*;
-import zoo.mammals.primates.*;
+import zoo.fishes.*;
 
 /** main class for this application. */
 public class Main {
@@ -11,31 +10,29 @@ public class Main {
      * @param args ignored in this case
      */
     public static void main(String[] args) {
-        // create new zoo with two habitats
-        Zoo<Habitat<?>> zoo = new Zoo<>();
+        // create new zoo with fish habitats
+        Aquarium aquarium = new Aquarium();
 
-        // create new habitat for cats,
-        // add tiger and british shorthair cat
-        Habitat<Cat> catHab = new Habitat<>("cat cosmos");
+        // create new habitat for eels
+        Habitat<Eel> eelHab = new Habitat<>("eel lagoon");
 
-        Cat bsCat = new BritishShorthair();
-        catHab.add(bsCat);
+        Eel eel1 = new Eel();
+        eelHab.add(eel1);
 
-        Cat tigerCat = new Tiger();
-        catHab.add(tigerCat);
+        Eel eel2 = new Eel();
+        eelHab.add(eel2);
 
-        zoo.build(catHab);
+        aquarium.build(eelHab);
 
-        // create new habitat for primates,
-        // add human and gorilla primate
-        Habitat<Primate> primateHab = new Habitat<>("primate prison");
+        // create new habitat for sharks
+        Habitat<Shark> sharkHab = new Habitat<>("shark tank");
 
-        Primate humanPrimate = new Human();
-        primateHab.add(humanPrimate);
+        Shark shark1 = new Shark();
+        sharkHab.add(shark1);
 
-        Primate gorillaPrimate = new Gorilla();
-        primateHab.add(gorillaPrimate);
+        Shark shark2 = new Shark();
+        sharkHab.add(shark2);
 
-        zoo.build(primateHab);
+        aquarium.build(sharkHab);
     }
 }
