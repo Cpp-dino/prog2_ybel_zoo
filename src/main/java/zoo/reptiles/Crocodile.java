@@ -13,6 +13,7 @@ public class Crocodile implements Reptile {
 
     /** crocodiles can move around. */
     public void move() {
-        System.out.println("Crocodile moves forward by either swinging through the water or running on land.");
+        System.out.println(
+                "Crocodile moves forward by either swinging through the water or running on land.");
     }
 }

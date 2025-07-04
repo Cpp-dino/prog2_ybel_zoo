@@ -13,6 +13,7 @@ public class Beaver implements Rodent {
 
     /** mice can move around. */
     public void move() {
-        System.out.println("Beaver moves forward by either swimming through the water or running on land.");
+        System.out.println(
+                "Beaver moves forward by either swimming through the water or running on land.");
     }
 }
