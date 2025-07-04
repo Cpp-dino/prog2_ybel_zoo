@@ -1,5 +1,5 @@
-import zoo.Zoo;
 import zoo.Habitat;
+import zoo.Zoo;
 import zoo.mammals.cats.*;
 import zoo.mammals.primates.*;
 
@@ -12,7 +12,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // create new zoo with two habitats
-        Zoo<Habitat> zoo = new Zoo<>();
+        Zoo<Habitat<?>> zoo = new Zoo<>();
 
         // create new habitat for cats,
         // add tiger and british shorthair cat
@@ -32,7 +32,7 @@ public class Main {
 
         Primate humanPrimate = new Human();
         primateHab.add(humanPrimate);
-        
+
         Primate gorillaPrimate = new Gorilla();
         primateHab.add(gorillaPrimate);
 
